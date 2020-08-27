@@ -32,5 +32,4 @@ class ShowAlert {
             viewController.present(alert, animated: true, completion: nil)
         }
     }
-    //TODO: Create function for ok/cancel alert with completion handler
 }
