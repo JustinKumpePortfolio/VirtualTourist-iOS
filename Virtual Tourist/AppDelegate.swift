@@ -14,12 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+//		Set dataController to be injected
     let dataController = DataController(modelname: "Virtual_Tourist")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        dataController.load()
         
+//			Load dataController
+			dataController.load()
+        
+//			Inject dataController into first ViewController
         let navagationController = window?.rootViewController as! UINavigationController
         let locationsMapViewController = navagationController.topViewController as! LocationsMapViewController
         locationsMapViewController.dataController = dataController

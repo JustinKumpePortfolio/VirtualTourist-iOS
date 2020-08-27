@@ -20,13 +20,18 @@ class PhotoAlbumViewController: UIViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     
-//    MARK: Variables
-    var pin: Pin!
+//    MARK: Data Controller
     var dataController:DataController!
     var fetchedResultsController:NSFetchedResultsController<Photo>!
+
+//		MARK: Variables
+	 var pin: Pin!
     var page: Int = 1
+
+//		Block Operations required for collectionView fetched results controller delegate
     var blockOperations: [BlockOperation] = []
     
+//		MARK: setupFetchedResultsController
     fileprivate func setupFetchedResultsController() {
         let fetchRequest:NSFetchRequest<Photo> = Photo.fetchRequest()
         let predicate = NSPredicate(format: "pin == %@", pin)
@@ -44,6 +49,7 @@ class PhotoAlbumViewController: UIViewController {
         }
     }
 
+//		MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         setupFetchedResultsController()
@@ -64,6 +70,7 @@ class PhotoAlbumViewController: UIViewController {
         }
     }
     
+//		MARK: viewDidDisappear
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         fetchedResultsController = nil
@@ -119,6 +126,7 @@ class PhotoAlbumViewController: UIViewController {
         }
     }
     
+//		MARK: downloadPhotoImages
     func downloadPhotoImages(photos: [FlickrPhoto]){
         var i = 0
         for photo in photos {
@@ -130,6 +138,7 @@ class PhotoAlbumViewController: UIViewController {
     
 //    MARK: handleImageDownloadResponse
     func handleImageDownloadResponse(image: UIImage?, error: Error?, index: Int){
+
         guard let image = image else{
             Logger.log(.error, "Image Var NIL")
             return
@@ -148,7 +157,7 @@ class PhotoAlbumViewController: UIViewController {
         }
     }
     
-//    MARK: deleteImage
+//    MARK: deletePhoto
     func deletePhoto(indexPath: IndexPath){
         Logger.log(.action, "Delete Photo at \(indexPath)")
         let photoToDelete = fetchedResultsController.object(at: indexPath)

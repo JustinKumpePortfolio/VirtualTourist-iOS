@@ -47,11 +47,12 @@ class LocationsMapViewController: UIViewController, NSFetchedResultsControllerDe
             zoomMap()
         }
         
+//			Setup Long Press Gesture
+//			TODO: Refactor long press gesture into function
         let longPress: UILongPressGestureRecognizer = UILongPressGestureRecognizer()
         longPress.addTarget(self, action: #selector(didLongPress(_:)))
         mapView.addGestureRecognizer(longPress)
-        setupFetchedResultsController()
-        createAnnotations()
+
         UserDefaults.standard.set(true, forKey: "HasLaunchedBefore")
         
     }
