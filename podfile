@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '13.6'
+use_frameworks!
+
+target 'Virtual Tourist' do
+        pod 'Alamofire-SwiftyJSON'
+end
+
+

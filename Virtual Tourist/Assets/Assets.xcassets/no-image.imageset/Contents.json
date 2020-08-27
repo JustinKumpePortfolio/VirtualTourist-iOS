@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "catimage-no-image.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

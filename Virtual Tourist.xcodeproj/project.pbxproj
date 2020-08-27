@@ -3,29 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F38E51B24EDF54B0034352B /* FlickrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38E51A24EDF54B0034352B /* FlickrClient.swift */; };
+		0FD61DA024F2F04700ABD2A9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD61D9F24F2F04700ABD2A9 /* Logger.swift */; };
+		0FD61DA224F30D1400ABD2A9 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD61DA124F30D1400ABD2A9 /* FlickrPhoto.swift */; };
+		0FD61DA424F30EE000ABD2A9 /* FlickrPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD61DA324F30EE000ABD2A9 /* FlickrPhotos.swift */; };
+		0FD61DA624F30F3800ABD2A9 /* FlickrPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD61DA524F30F3800ABD2A9 /* FlickrPhotosResponse.swift */; };
+		0FD61DA824F3351400ABD2A9 /* LocationsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD61DA724F3351400ABD2A9 /* LocationsMapViewController.swift */; };
+		0FD61DAF24F5E54D00ABD2A9 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD61DAE24F5E54D00ABD2A9 /* ImageCollectionViewCell.swift */; };
 		0FE55DE924E9E4430090B6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE55DE824E9E4430090B6E8 /* AppDelegate.swift */; };
-		0FE55DEB24E9E4430090B6E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE55DEA24E9E4430090B6E8 /* SceneDelegate.swift */; };
-		0FE55DED24E9E4430090B6E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE55DEC24E9E4430090B6E8 /* ViewController.swift */; };
+		0FE55DED24E9E4430090B6E8 /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE55DEC24E9E4430090B6E8 /* PhotoAlbumViewController.swift */; };
 		0FE55DF024E9E4430090B6E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE55DEE24E9E4430090B6E8 /* Main.storyboard */; };
 		0FE55DF324E9E4430090B6E8 /* Virtual_Tourist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FE55DF124E9E4430090B6E8 /* Virtual_Tourist.xcdatamodeld */; };
 		0FE55DF524E9E4460090B6E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE55DF424E9E4460090B6E8 /* Assets.xcassets */; };
 		0FE55DF824E9E4460090B6E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE55DF624E9E4460090B6E8 /* LaunchScreen.storyboard */; };
+		0FE55E0824EB35EC0090B6E8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE55E0724EB35EC0090B6E8 /* DataController.swift */; };
+		0FE55E0B24EB36850090B6E8 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE55E0A24EB36850090B6E8 /* GCDBlackBox.swift */; };
+		0FE55E0D24EB36B80090B6E8 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE55E0C24EB36B80090B6E8 /* ShowAlert.swift */; };
+		F5429A645A82B751E235C411 /* Pods_Virtual_Tourist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C1CA6550C9EF8D60423B69 /* Pods_Virtual_Tourist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F38E51A24EDF54B0034352B /* FlickrClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrClient.swift; sourceTree = "<group>"; };
+		0FD61D9F24F2F04700ABD2A9 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		0FD61DA124F30D1400ABD2A9 /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		0FD61DA324F30EE000ABD2A9 /* FlickrPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotos.swift; sourceTree = "<group>"; };
+		0FD61DA524F30F3800ABD2A9 /* FlickrPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotosResponse.swift; sourceTree = "<group>"; };
+		0FD61DA724F3351400ABD2A9 /* LocationsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsMapViewController.swift; sourceTree = "<group>"; };
+		0FD61DAE24F5E54D00ABD2A9 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FE55DE524E9E4430090B6E8 /* Virtual Tourist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virtual Tourist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE55DE824E9E4430090B6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FE55DEA24E9E4430090B6E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0FE55DEC24E9E4430090B6E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0FE55DEC24E9E4430090B6E8 /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
 		0FE55DEF24E9E4430090B6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FE55DF224E9E4430090B6E8 /* Virtual_Tourist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Virtual_Tourist.xcdatamodel; sourceTree = "<group>"; };
 		0FE55DF424E9E4460090B6E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FE55DF724E9E4460090B6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FE55DF924E9E4460090B6E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FE55E0724EB35EC0090B6E8 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		0FE55E0A24EB36850090B6E8 /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		0FE55E0C24EB36B80090B6E8 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		37C1CA6550C9EF8D60423B69 /* Pods_Virtual_Tourist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Virtual_Tourist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49C1F99C61FA38FAF7D9625F /* Pods-Virtual Tourist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Virtual Tourist.release.xcconfig"; path = "Target Support Files/Pods-Virtual Tourist/Pods-Virtual Tourist.release.xcconfig"; sourceTree = "<group>"; };
+		523C7447693A07DE2AC8F178 /* Pods-Virtual Tourist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Virtual Tourist.debug.xcconfig"; path = "Target Support Files/Pods-Virtual Tourist/Pods-Virtual Tourist.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +55,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5429A645A82B751E235C411 /* Pods_Virtual_Tourist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FD61DAD24F5D03000ABD2A9 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				0F38E51A24EDF54B0034352B /* FlickrClient.swift */,
+				0FD61DA124F30D1400ABD2A9 /* FlickrPhoto.swift */,
+				0FD61DA324F30EE000ABD2A9 /* FlickrPhotos.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		0FE55DDC24E9E4430090B6E8 = {
 			isa = PBXGroup;
 			children = (
 				0FE55DE724E9E4430090B6E8 /* Virtual Tourist */,
 				0FE55DE624E9E4430090B6E8 /* Products */,
+				8C039011ACF991032EFBBCD2 /* Pods */,
+				1EDED2525D3301CE43808DD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +93,88 @@
 		0FE55DE724E9E4430090B6E8 /* Virtual Tourist */ = {
 			isa = PBXGroup;
 			children = (
+				0FE55E0924EB366C0090B6E8 /* Helper Utilities */,
 				0FE55DE824E9E4430090B6E8 /* AppDelegate.swift */,
-				0FE55DEA24E9E4430090B6E8 /* SceneDelegate.swift */,
-				0FE55DEC24E9E4430090B6E8 /* ViewController.swift */,
-				0FE55DEE24E9E4430090B6E8 /* Main.storyboard */,
-				0FE55DF424E9E4460090B6E8 /* Assets.xcassets */,
-				0FE55DF624E9E4460090B6E8 /* LaunchScreen.storyboard */,
+				0FE55E0024EB333C0090B6E8 /* Model */,
+				0FE55E0224EB335D0090B6E8 /* Controller */,
+				0FE55E0124EB33510090B6E8 /* View */,
+				0FE55E0524EB33A50090B6E8 /* Assets */,
+				0FE55E0624EB33AD0090B6E8 /* Storyboards */,
 				0FE55DF924E9E4460090B6E8 /* Info.plist */,
-				0FE55DF124E9E4430090B6E8 /* Virtual_Tourist.xcdatamodeld */,
 			);
 			path = "Virtual Tourist";
+			sourceTree = "<group>";
+		};
+		0FE55E0024EB333C0090B6E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0FD61DAD24F5D03000ABD2A9 /* Structs */,
+				0FE55DF124E9E4430090B6E8 /* Virtual_Tourist.xcdatamodeld */,
+				0FE55E0724EB35EC0090B6E8 /* DataController.swift */,
+				0FD61DA524F30F3800ABD2A9 /* FlickrPhotosResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0FE55E0124EB33510090B6E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FD61DAE24F5E54D00ABD2A9 /* ImageCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FE55E0224EB335D0090B6E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0FE55DEC24E9E4430090B6E8 /* PhotoAlbumViewController.swift */,
+				0FD61DA724F3351400ABD2A9 /* LocationsMapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0FE55E0524EB33A50090B6E8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0FE55DF424E9E4460090B6E8 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		0FE55E0624EB33AD0090B6E8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0FE55DEE24E9E4430090B6E8 /* Main.storyboard */,
+				0FE55DF624E9E4460090B6E8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0FE55E0924EB366C0090B6E8 /* Helper Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0FE55E0A24EB36850090B6E8 /* GCDBlackBox.swift */,
+				0FE55E0C24EB36B80090B6E8 /* ShowAlert.swift */,
+				0FD61D9F24F2F04700ABD2A9 /* Logger.swift */,
+			);
+			path = "Helper Utilities";
+			sourceTree = "<group>";
+		};
+		1EDED2525D3301CE43808DD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37C1CA6550C9EF8D60423B69 /* Pods_Virtual_Tourist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C039011ACF991032EFBBCD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				523C7447693A07DE2AC8F178 /* Pods-Virtual Tourist.debug.xcconfig */,
+				49C1F99C61FA38FAF7D9625F /* Pods-Virtual Tourist.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FE55DFC24E9E4460090B6E8 /* Build configuration list for PBXNativeTarget "Virtual Tourist" */;
 			buildPhases = (
+				F4C0C30C5738F6E21ED9DBE2 /* [CP] Check Pods Manifest.lock */,
 				0FE55DE124E9E4430090B6E8 /* Sources */,
 				0FE55DE224E9E4430090B6E8 /* Frameworks */,
 				0FE55DE324E9E4430090B6E8 /* Resources */,
+				CC602BAEF928EAA818B57D0D /* [CP] Embed Pods Frameworks */,
+				0FD61DB024F7123600ABD2A9 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -136,15 +246,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FD61DB024F7123600ABD2A9 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nTAGS=\"TODO:|FIXME:|WARNING:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"| perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n";
+		};
+		CC602BAEF928EAA818B57D0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Virtual Tourist/Pods-Virtual Tourist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Virtual Tourist/Pods-Virtual Tourist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Virtual Tourist/Pods-Virtual Tourist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4C0C30C5738F6E21ED9DBE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Virtual Tourist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0FE55DE124E9E4430090B6E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD61DA624F30F3800ABD2A9 /* FlickrPhotosResponse.swift in Sources */,
+				0FE55E0824EB35EC0090B6E8 /* DataController.swift in Sources */,
+				0FD61DAF24F5E54D00ABD2A9 /* ImageCollectionViewCell.swift in Sources */,
+				0FD61DA824F3351400ABD2A9 /* LocationsMapViewController.swift in Sources */,
 				0FE55DF324E9E4430090B6E8 /* Virtual_Tourist.xcdatamodeld in Sources */,
-				0FE55DED24E9E4430090B6E8 /* ViewController.swift in Sources */,
+				0FE55DED24E9E4430090B6E8 /* PhotoAlbumViewController.swift in Sources */,
 				0FE55DE924E9E4430090B6E8 /* AppDelegate.swift in Sources */,
-				0FE55DEB24E9E4430090B6E8 /* SceneDelegate.swift in Sources */,
+				0FD61DA224F30D1400ABD2A9 /* FlickrPhoto.swift in Sources */,
+				0FD61DA024F2F04700ABD2A9 /* Logger.swift in Sources */,
+				0FE55E0D24EB36B80090B6E8 /* ShowAlert.swift in Sources */,
+				0FE55E0B24EB36850090B6E8 /* GCDBlackBox.swift in Sources */,
+				0F38E51B24EDF54B0034352B /* FlickrClient.swift in Sources */,
+				0FD61DA424F30EE000ABD2A9 /* FlickrPhotos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,11 +465,13 @@
 		};
 		0FE55DFD24E9E4460090B6E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 523C7447693A07DE2AC8F178 /* Pods-Virtual Tourist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
 				INFOPLIST_FILE = "Virtual Tourist/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +485,13 @@
 		};
 		0FE55DFE24E9E4460090B6E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49C1F99C61FA38FAF7D9625F /* Pods-Virtual Tourist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T42Z3DM34;
 				INFOPLIST_FILE = "Virtual Tourist/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
