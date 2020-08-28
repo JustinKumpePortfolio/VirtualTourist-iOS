@@ -65,9 +65,9 @@
 		0FD61DAD24F5D03000ABD2A9 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				0F38E51A24EDF54B0034352B /* FlickrClient.swift */,
 				0FD61DA124F30D1400ABD2A9 /* FlickrPhoto.swift */,
 				0FD61DA324F30EE000ABD2A9 /* FlickrPhotos.swift */,
+				0FD61DA524F30F3800ABD2A9 /* FlickrPhotosResponse.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -108,10 +108,10 @@
 		0FE55E0024EB333C0090B6E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0F38E51A24EDF54B0034352B /* FlickrClient.swift */,
 				0FD61DAD24F5D03000ABD2A9 /* Structs */,
 				0FE55DF124E9E4430090B6E8 /* Virtual_Tourist.xcdatamodeld */,
 				0FE55E0724EB35EC0090B6E8 /* DataController.swift */,
-				0FD61DA524F30F3800ABD2A9 /* FlickrPhotosResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

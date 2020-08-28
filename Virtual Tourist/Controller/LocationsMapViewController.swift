@@ -11,6 +11,7 @@ import UIKit
 import CoreData
 import MapKit
 
+
 class LocationsMapViewController: UIViewController, NSFetchedResultsControllerDelegate{
     
 //    MARK: Map View
@@ -19,6 +20,8 @@ class LocationsMapViewController: UIViewController, NSFetchedResultsControllerDe
 //    MARK: Data Controller
     var dataController:DataController!
     var fetchedResultsController:NSFetchedResultsController<Pin>!
+    
+//    MARK: Activity Indicator
     
 //    MARK: Parameters
     var isFirstLaunch:Bool!
@@ -46,9 +49,7 @@ class LocationsMapViewController: UIViewController, NSFetchedResultsControllerDe
         if UserDefaults.standard.bool(forKey: "HasLaunchedBefore"){
             zoomMap()
         }
-        
 //			Setup Long Press Gesture
-//			TODO: Refactor long press gesture into function
         let longPress: UILongPressGestureRecognizer = UILongPressGestureRecognizer()
         longPress.addTarget(self, action: #selector(didLongPress(_:)))
         mapView.addGestureRecognizer(longPress)

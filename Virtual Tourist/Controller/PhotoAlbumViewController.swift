@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import MapKit
+import Toast_Swift
 
 class PhotoAlbumViewController: UIViewController {
     
@@ -25,7 +26,7 @@ class PhotoAlbumViewController: UIViewController {
     var fetchedResultsController:NSFetchedResultsController<Photo>!
 
 //		MARK: Variables
-	 var pin: Pin!
+    var pin: Pin!
     var page: Int = 1
 
 //		Block Operations required for collectionView fetched results controller delegate
@@ -97,13 +98,13 @@ class PhotoAlbumViewController: UIViewController {
 //    MARK: grabPhotosList
 //    Grabs list of photos from Flickr
     func grabPhotosList(page: Int){
-        
+        enableUI(false)
         FlickrClient.searchPhotos(lat: pin.latitude, long: pin.longitude, page: page, completion: handleSearchResponse(FlickrPhotosResponse:error:))
     }
 
 //    MARK: handleSearchResponse
     func handleSearchResponse(FlickrPhotosResponse: FlickrPhotosResponse?, error: Error?){
-        
+        enableUI(true)
         guard let photosResponse = FlickrPhotosResponse else {
             return
         }
@@ -163,6 +164,7 @@ class PhotoAlbumViewController: UIViewController {
         let photoToDelete = fetchedResultsController.object(at: indexPath)
         dataController.viewContext.delete(photoToDelete)
         try? dataController.viewContext.save()
+        self.view.makeToast("Photo Deleted", duration: 1.0, position: .top)
     }
     
 //    MARK: newCollectionPressed
@@ -176,6 +178,17 @@ class PhotoAlbumViewController: UIViewController {
         page += 1
         grabPhotosList(page: page)
     }
+    
+//    MARK: enableUI
+    func enableUI(_ enable: Bool){
+        if enable{
+            self.view.hideAllToasts(includeActivity: true, clearQueue: true)
+        }else{
+            self.view.makeToastActivity(.center)
+        }
+    }
+    
+    
 }
 
 //MARK: FetchedResultsControllerDelegate

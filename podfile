@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'Virtual Tourist' do
         pod 'Alamofire-SwiftyJSON'
+	pod 'Toast-Swift'
 end
 
 
