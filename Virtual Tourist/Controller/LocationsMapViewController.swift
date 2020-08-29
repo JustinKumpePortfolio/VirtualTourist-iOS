@@ -17,8 +17,7 @@ class LocationsMapViewController: UIViewController, NSFetchedResultsControllerDe
 //    MARK: Map View
     @IBOutlet weak var mapView: MKMapView!
     
-//    MARK: Data Controller
-    var dataController:DataController!
+//    MARK: Fetched Results Controller
     var fetchedResultsController:NSFetchedResultsController<Pin>!
     
 //    MARK: Activity Indicator
@@ -33,7 +32,7 @@ class LocationsMapViewController: UIViewController, NSFetchedResultsControllerDe
         let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: dataController.viewContext, sectionNameKeyPath: nil, cacheName: "Pins")
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: DataController.shared.viewContext, sectionNameKeyPath: nil, cacheName: "Pins")
         fetchedResultsController.delegate = self
         do {
             try fetchedResultsController.performFetch()
@@ -91,11 +90,11 @@ class LocationsMapViewController: UIViewController, NSFetchedResultsControllerDe
         annotation.title = ""
         mapView.addAnnotation(annotation)
         
-        let pin = Pin(context: dataController.viewContext)
+        let pin = Pin(context: DataController.shared.viewContext)
         pin.latitude = annotation.coordinate.latitude
         pin.longitude = annotation.coordinate.longitude
         pin.creationDate = Date()
-        try? dataController.viewContext.save()
+        try? DataController.shared.viewContext.save()
         Logger.log(.success, "didLongPress with Coordinates \(annotation.coordinate.latitude), \(annotation.coordinate.longitude)")
     }
     
@@ -115,12 +114,11 @@ class LocationsMapViewController: UIViewController, NSFetchedResultsControllerDe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewController = segue.destination as! PhotoAlbumViewController
         let annotation = sender as! MKAnnotation
-        viewController.dataController = dataController
         
         let fetchRequest:NSFetchRequest<Pin> = Pin.fetchRequest()
         let predicate = NSPredicate(format: "latitude == %@ AND longitude == %@", argumentArray: [annotation.coordinate.latitude, annotation.coordinate.longitude])
         fetchRequest.predicate = predicate
-        if let result = try? dataController.viewContext.fetch(fetchRequest){
+        if let result = try? DataController.shared.viewContext.fetch(fetchRequest){
             if result.count >= 0{
                 viewController.pin = result[0]
             }

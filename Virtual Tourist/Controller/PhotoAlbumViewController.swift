@@ -21,8 +21,7 @@ class PhotoAlbumViewController: UIViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     
-//    MARK: Data Controller
-    var dataController:DataController!
+//    MARK: Fetched Results Controller
     var fetchedResultsController:NSFetchedResultsController<Photo>!
 
 //		MARK: Variables
@@ -40,7 +39,7 @@ class PhotoAlbumViewController: UIViewController {
         let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: dataController.viewContext, sectionNameKeyPath: nil, cacheName: "\(String(describing: pin))-photos")
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: DataController.shared.viewContext, sectionNameKeyPath: nil, cacheName: "\(String(describing: pin))-photos")
         fetchedResultsController.delegate = self
         do {
             try fetchedResultsController.performFetch()
@@ -114,11 +113,11 @@ class PhotoAlbumViewController: UIViewController {
             ShowAlert.error(viewController: self, title: "No Images", message: "No images were found for this location.")
         }else{
             for _ in photosResponse.photos.photo{
-                let photo = Photo(context: dataController.viewContext)
+                let photo = Photo(context: DataController.shared.viewContext)
                 photo.image = UIImage.init(imageLiteralResourceName: "no-image").jpegData(compressionQuality: 1.0)
                 photo.pin = pin
                 photo.creationDate = Date()
-                try? dataController.viewContext.save()
+                try? DataController.shared.viewContext.save()
             }
             
         }
@@ -151,7 +150,7 @@ class PhotoAlbumViewController: UIViewController {
         }
         
         fetchedObjects[index].image = image.jpegData(compressionQuality: 1.0)
-        try? dataController.viewContext.save()
+        try? DataController.shared.viewContext.save()
         
         dispatchOnMain {
             self.collectionView.reloadData()
@@ -162,8 +161,8 @@ class PhotoAlbumViewController: UIViewController {
     func deletePhoto(indexPath: IndexPath){
         Logger.log(.action, "Delete Photo at \(indexPath)")
         let photoToDelete = fetchedResultsController.object(at: indexPath)
-        dataController.viewContext.delete(photoToDelete)
-        try? dataController.viewContext.save()
+        DataController.shared.viewContext.delete(photoToDelete)
+        try? DataController.shared.viewContext.save()
         self.view.makeToast("Photo Deleted", duration: 1.0, position: .top)
     }
     
@@ -171,9 +170,9 @@ class PhotoAlbumViewController: UIViewController {
     @IBAction func newCollectionPressed(sender: Any){
         if let fetchedObjects = fetchedResultsController.fetchedObjects {
             for fetchedObject in fetchedObjects {
-                dataController.viewContext.delete(fetchedObject)
+                DataController.shared.viewContext.delete(fetchedObject)
             }
-            try? dataController.viewContext.save()
+            try? DataController.shared.viewContext.save()
         }
         page += 1
         grabPhotosList(page: page)
