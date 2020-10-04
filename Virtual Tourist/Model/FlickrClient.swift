@@ -55,30 +55,30 @@ class FlickrClient {
         
         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default) .responseSwiftyJSON { dataResponse in
                     
-        //            GUARD: isSuccess
-                    guard case dataResponse.result.isSuccess = true else {
-                        completion(nil,dataResponse.error)
-                        return
-                    }
-                    
-        //            GUARD: Response
-                    guard let data = dataResponse.data else{
-                        completion(nil,dataResponse.error)
-                        return
-                    }
-                    
-                    
-                    do {
-                        let decoder = JSONDecoder()
-                        let response = try decoder.decode(responseType.self, from: data)
-                        completion(response,nil)
-                    } catch let error {
-                        Logger.log(.error, "Task For Get: \(error.localizedDescription)")
-                        completion(nil,error)
-                    }
+//            GUARD: isSuccess
+            guard case dataResponse.result.isSuccess = true else {
+                completion(nil,dataResponse.error)
+                return
+            }
+                             
+//            GUARD: Response
+            guard let data = dataResponse.data else{
+                completion(nil,dataResponse.error)
+                return
+            }
                     
                     
-                }
+            do {
+                let decoder = JSONDecoder()
+                let response = try decoder.decode(responseType.self, from: data)
+                completion(response,nil)
+            } catch let error {
+                Logger.log(.error, "Task For Get: \(error.localizedDescription)")
+                completion(nil,error)
+            }
+                    
+                    
+        }
     }
     
 //    MARK: Download Image
