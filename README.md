@@ -21,7 +21,7 @@ Virtual Tourist is an app that allows you to drop a pin on a location and view a
 ### Home (Map) Screen:
 - Zoom into a location on the map
 - Tap and hold to drop a pin
-- Tap on the pin you just dropped (or an existing pin you have previously dropped) to be taken to the Image Collection screen
+- Tap on the pin you just dropped (or an existing pin you have previously dropped) to be taken to the [Image Collection](https://github.com/JustinKumpePortfolio/VirtualTourist-iOS#image-collection-screen) screen
 
 ### Image Collection Screen:
 - Scroll thru the image collection to view photos from the area
