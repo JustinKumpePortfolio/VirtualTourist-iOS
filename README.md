@@ -1,4 +1,4 @@
-# VirtualTourist-iOS
+# VirtualTourist <img src="https://img.shields.io/badge/platform-iOS-lightgrey"/> <img src="https://img.shields.io/badge/swift-5-green"/>
 Virtual Tourist is an app that allows you to drop a pin on a location and view a collection of photos from Flickr that were taken near that location. This app was created from scratch to meet specifications for my final project in the Data Persistence course as part of my iOS Developer Nanodegree from Udacity.
 
 ## Screenshots
